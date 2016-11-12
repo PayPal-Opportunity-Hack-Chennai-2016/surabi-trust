@@ -64,6 +64,7 @@ const Student = mongoose.model('student', {
   education : { type: String, required: true },
   profile   : { type: String },
   location  : { type: String, required: true },
+  summary   : { type: String },
   tags      : [],
   interests : [],
   isApproved: { type: Boolean, default: false }

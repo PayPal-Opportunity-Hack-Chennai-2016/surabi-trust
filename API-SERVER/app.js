@@ -32,6 +32,10 @@ app.get('/', function(req, res){
 
 const router = require('./routes')(app);
 
+app.all("/*", function(req, res, next) {
+    res.sendfile("index.html", { root: __dirname + "/public/student" });
+});
+
 app.listen(config.PORT, function(){
 	console.log('Server listening on port '+ config.PORT);
 });

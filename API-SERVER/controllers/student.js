@@ -49,10 +49,10 @@ exports.login = function(req, res, next)  {
       res.status(500);
       res.send(err);
     }
-    else if(mentor) {
-      var isCorrect = bcrypt.compareSync(password, mentor.password);
+    else if(student) {
+      var isCorrect = bcrypt.compareSync(password, student.password);
       if(isCorrect) {
-        req.user = mentor;
+        req.user = student;
         next();
       }
       else {
