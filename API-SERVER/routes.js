@@ -30,6 +30,7 @@ module.exports = function(app) {
 
   // Assignments Route
   app.post('/assignment/create', assignment.create);
+  app.post('/assignment/submit', assignment.submit);
 
   // File Uploads
   const uuid   = require("uuid")

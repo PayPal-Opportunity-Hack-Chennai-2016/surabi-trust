@@ -80,7 +80,6 @@ const Assignment = mongoose.model('assignment', {
   updated_at  : { type: Date, default: new Date },
   assignment  : {
                   description : { type: String },
-                  date        : { type: String },
                   submission  : [],
                   isDone      : { type: Boolean, default: false }
                 }
