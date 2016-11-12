@@ -21,7 +21,14 @@ const Mentor = mongoose.model('mentors', {
   education : { type: String, required: true },
   skills    : [],
   picture   : { type: String },
-  isApproved: { type: Boolean, required: true, default: false }
+  isApproved: { type: Boolean, required: true, default: false },
+  support   : {
+                mentorType : { type: Number },
+                name       : { type: String },
+                phone      : { type: Number },
+                email      : { type: String },
+                location   : { type: String }
+              }
 });
 
 // Schema for Courses
@@ -32,8 +39,10 @@ const Course = mongoose.model('courses', {
   description : { type: String, required: true },
   duration    : { type: Number, required: true },
   type        : { type: String, required: true },
-  isClosed    : { type: Boolean, required: true, default: false },
+  isArchived  : { type: Boolean, required: true, default: false },
   videoUrl    : { type: String },
+  mentor_id   : { type: Schema.ObjectId, required: true },
+  created_at  : { type: String, required: true, default: new Date },
   slots       : [
                   {
                     from        : { type: String, required: true },
@@ -55,7 +64,8 @@ const Student = mongoose.model('student', {
   profile   : { type: String },
   location  : { type: String, required: true },
   tags      : [],
-  interests : []
+  interests : [],
+  isApproved: { type: Boolean, default: false }
 });
 
 // Schema for Assignments
@@ -78,3 +88,10 @@ const Admin = mongoose.model('Admin', {
   email     : { type: String, required: true },
   password  : { type: String, required: true }
 });
+
+module.exports = {
+  Mentor      : Mentor,
+  Course      : Course,
+  Student     : Student,
+  Assignment  : Assignment
+}
