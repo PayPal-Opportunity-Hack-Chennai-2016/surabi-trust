@@ -33,13 +33,13 @@ exports.login = function(req, res, next)  {
 
   // Query the DB to get the user
   Mentor.findOne({  email : email }, function(err, mentor){
-
     if(err) {
       console.log(err);
       res.status(500);
       res.send(err);
     }
     else if(mentor) {
+      // In case the user is not approved, don't  allow him to login
       if(!mentor.isApproved) {
         res.status(400);
         res.send({ status: "failure", message: "You are not approved yet." });

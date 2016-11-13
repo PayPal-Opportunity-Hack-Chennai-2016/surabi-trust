@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-
+// Enable CORS
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
@@ -32,6 +32,7 @@ app.get('/', function(req, res){
 
 const router = require('./routes')(app);
 
+// Handle Angular SPA Static files
 app.all("/*", function(req, res, next) {
     res.sendfile("index.html", { root: __dirname + "/public/student" });
 });
