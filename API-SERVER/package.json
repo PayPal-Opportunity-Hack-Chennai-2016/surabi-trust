@@ -12,8 +12,11 @@
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "jsonwebtoken": "^7.1.9",
     "mongoose": "^4.6.7",
     "multer": "^1.2.0",
+    "raccoon": "^0.2.3",
+    "redis": "^2.6.3",
     "underscore": "^1.8.3",
     "uuid": "^2.0.3"
   }

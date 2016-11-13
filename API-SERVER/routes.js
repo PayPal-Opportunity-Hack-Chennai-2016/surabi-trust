@@ -1,36 +1,37 @@
 "use strict";
 
-const mentor     = require('./controllers/mentor');
-const student    = require('./controllers/student');
-const course     = require('./controllers/course');
-const assignment = require('./controllers/assignment');
-
+const session         = require('./lib/session');
+const mentor          = require('./controllers/mentor');
+const student         = require('./controllers/student');
+const course          = require('./controllers/course');
+const assignment      = require('./controllers/assignment');
+const recommendation  = require('./controllers/recommendation');
 
 module.exports = function(app) {
 
   // Mentor Signup & Login Routes
   app.post('/mentor/signup', mentor.create);
-  app.post('/mentor/login', mentor.login, function(req,res){
-    res.send({ status: "Logged in successfully" });
-  });
+  app.post('/mentor/login', mentor.login, session.signIn);
 
   // Student Signup & Login Routes
   app.post('/student/signup', student.create);
-  app.post('/student/login', student.login, function(req,res){
-    res.send({ status: "Logged in successfully" });
-  });
+  app.post('/student/login', student.login, session.signIn);
 
   // Courses Route
-  app.get('/course/all', course.getAll);
-  app.post('/course/create', course.create);
-  app.get('/course/view', course.view);
-  app.post('/course/enroll', course.enroll);
-  app.put('/course/archive', course.archive);
-  app.delete('/course/delete', course.remove);
+  app.get('/course/all', session.isAuthenticated, course.getAll);
+  app.post('/course/create', session.isAuthenticated, course.create);
+  app.get('/course/view', session.isAuthenticated, course.view);
+  app.post('/course/enroll', session.isAuthenticated, course.enroll);
+  app.put('/course/archive', session.isAuthenticated, course.archive);
+  app.delete('/course/delete', session.isAuthenticated, course.remove);
 
   // Assignments Route
-  app.post('/assignment/create', assignment.create);
-  app.post('/assignment/submit', assignment.submit);
+  app.post('/assignment/create', session.isAuthenticated, assignment.create);
+  app.post('/assignment/submit', session.isAuthenticated, assignment.submit);
+
+  // Recommendation Route
+  app.get('/recommendation', session.isAuthenticated, recommendation.getRecommendation);
+
 
   // File Uploads
   const uuid   = require("uuid")
@@ -50,7 +51,7 @@ module.exports = function(app) {
 
   var upload = multer({ storage: storage });
 
-  app.post('/image-upload', upload.single('file'), function(req, res){
+  app.post('/image-upload', session.isAuthenticated, upload.single('file'), function(req, res){
     res.json(req.file.filename);
   });
 
