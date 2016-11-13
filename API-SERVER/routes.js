@@ -6,6 +6,7 @@ const student         = require('./controllers/student');
 const course          = require('./controllers/course');
 const assignment      = require('./controllers/assignment');
 const recommendation  = require('./controllers/recommendation');
+const topics          = require('./controllers/topic-modelling');
 
 module.exports = function(app) {
 
@@ -32,6 +33,8 @@ module.exports = function(app) {
   // Recommendation Route
   app.get('/recommendation', session.isAuthenticated, recommendation.getRecommendation);
 
+  // Topic extraction from Courses content
+  app.post('/extract-topics', session.isAuthenticated, topics.generateTopic);
 
   // File Uploads
   const uuid   = require("uuid")
