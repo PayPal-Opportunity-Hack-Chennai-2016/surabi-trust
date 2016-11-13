@@ -1,0 +1,28 @@
+<ion-view view-title="Courses" cache-view="true" enable-menu-with-back-views="false" hide-nav-bar="false">
+    <ion-nav-buttons side="left">
+      <button class="button icon ion-android-arrow-back black1" ng-controller="UtilController" on-tap="go('back')"></button>
+    </ion-nav-buttons>
+
+
+    <ion-content class="background">
+      
+        <div class="card" ng-repeat="c in allcourses">
+          <a ui-sref="details({ cid : c._id })">
+          <div class="row ">
+            <div class="col-20">
+              <img src="../img/sidemenubg.jpg" class="course-image">
+            </div>
+            <div class="col">
+              <h6 class="zero_margin course-title">{{c.name}}</h6>
+                <p class="course-duration zero_margin">{{c.duration}} Hours</p>
+            </div>
+            <div class="col-25">
+              <span class="course-details">View Details</span>
+            </div>
+          </div>
+        </a>
+        </div>
+
+    </div>
+  </ion-content>
+</ion-view>

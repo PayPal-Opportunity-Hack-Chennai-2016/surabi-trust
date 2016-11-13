@@ -1,0 +1,90 @@
+<ion-view view-title="" cache-view="true" enable-menu-with-back-views="false" hide-nav-bar="false">
+    <!-- <ion-nav-buttons side="left">
+      <button class="button icon ion-navicon"></button>
+      
+    </ion-nav-buttons> -->
+    <ion-nav-buttons side="left" class="bar-royal">
+      <button menu-toggle="left" class="button icon ion-navicon" ></button>
+      <img src="../img/logo.png" style="width: 100px;position: absolute;top: 15px;left: 35%;">
+    </ion-nav-buttons>
+
+    <ion-content class="has-header background">
+      <div style="background-color: #eab825;">
+          <div class="row">
+            <div class="col ">
+              <center>
+                <h4 class="zero_margin white">{{allcourses.length || 0}}</h4>
+                <h6 class="margin-top white">Active Course</h6>  
+              </center>
+            </div>
+            <div class="col ">
+              <center>
+                <h4 class="zero_margin white">{{getStudents(allcourses)}}</h4>
+                <h6 class="margin-top white">Active Students</h6>  
+              </center>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col ">
+              <center>
+                <h4 class="zero_margin white">{{allcourses.assignments.length || 0}}</h4>
+                <h6 class="margin-top white">Assignment Review</h6>  
+              </center>
+            </div>
+            <div class="col ">
+              <center>
+                <h4 class="zero_margin white">{{allcourses.messages.length || 0}}</h4>
+                <h6 class="margin-top white">New Messages</h6>  
+              </center>
+            </div>
+          </div>
+  </div>
+
+        <div class="card card-padding " >
+            <a ui-sref="courses">
+          <div class="row zero_margin zero_padding">
+            <div class="col-20 zero_padding">
+              <i class="ion-ios-book-outline home-icon"></i>
+            </div>
+            <div class="col zero_padding" style="margin-top: 2%;">
+              
+                <h6 class="home-course-name zero_margin">View Courses</h6>
+                <sub class="home-course-active zero_margin">1 Active</sub>
+            </div>
+            <i class="ion-ios-arrow-forward home-more"></i>
+          </div>
+        </a>
+        </div>
+
+        <div class="card card-padding">
+          <a ui-sref="students">
+          <div class="row zero_margin zero_padding">
+            <div class="col-20 zero_padding">
+              <i class="ion-ios-people-outline home-icon"></i>
+            </div>
+            <div class="col zero_padding" style="margin-top: 2%;">
+              <h6 class="home-course-name zero_margin">View Students</h6>
+              <sub class="home-course-active zero_margin">2 Active</sub>
+            </div>
+            <i class="ion-ios-arrow-forward home-more"></i>
+          </div>
+          </a>
+        </div>
+
+        <div class="card card-padding">
+          <div class="row zero_margin zero_padding">
+            <div class="col-20 zero_padding">
+              <i class="ion-ios-chatboxes-outline home-icon"></i>
+            </div>
+            <div class="col zero_padding" style="margin-top: 2%;">
+              <h6 class="home-course-name zero_margin">View Messages</h6>
+              <sub class="home-course-active zero_margin">{{allcourses.messages.length || 0}} Active</sub>
+            </div>
+            <i class="ion-ios-arrow-forward home-more"></i>
+          </div>
+        </div>
+
+          
+        </div>
+    </ion-content>
+</ion-view>

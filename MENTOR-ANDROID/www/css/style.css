@@ -1,0 +1,324 @@
+* {
+  font-family: "Roboto";
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+a{
+  text-decoration: none;
+}
+.bar.bar-positive {
+  background-color: #eab825 !important;
+  color: #fff !important;
+}
+
+.center-align{
+  text-align: center;
+}
+.white1{
+  color: #f5f5f5 !important;
+}
+/*.black1{
+  color: #303030 !important;
+}*/
+
+.white{
+  color: white !important;
+}
+.bar.bar-positive .title {
+    color: #fff;
+}
+.cat-image{
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+}
+
+.cat-date{
+    font-size: 12px !important;
+    margin-top: 35% !important;
+    display: inline-block !important;
+}
+
+.zero_margin{
+  margin: 0 !important;
+}
+
+.zero_padding{
+  padding: 0 !important;
+}
+
+.highlight{
+  color:#4a87ee !important;
+}
+.background{
+  background-color: whitesmoke;
+}
+
+.card {
+  border: 1px solid #CCC;
+}
+
+.card-title {
+  margin: 0 !important;
+}
+
+.card p {
+  margin: 10px 0;
+}
+
+.schedule .title {
+  font-weight: 500;
+  font-family: "Roboto";
+}
+
+.margin-top{
+  margin-top: 0% !important;
+}
+
+.card-padding{
+  padding: 5% !important;
+}
+
+/*Home*/
+.home-icon{
+  font-size: 45px !important;
+  color: #EAB7AC !important;
+}
+
+.home-more{
+  font-size: 30px !important;
+  color: grey !important;
+  display: inline-block;
+  margin-top: 4%;
+}
+
+.home-course-active{
+    color: #cc2a2a;
+}
+
+.home-course-name{
+
+}
+
+.home-row{
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px !important;
+}
+
+/*courses*/
+.course-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+.course-duration{
+  font-size: 12px !important;
+
+}
+
+.course-title{
+  font-size: 15px !important;
+}
+
+.course-details{
+  font-size: 12px;
+  color: #af2121;
+  display: inline-block;
+  margin-top: 25%;
+}
+
+/*details*/
+.details-img{
+  width: 100vw !important;
+  height: 300px !important;
+  filter: opacity(35%);
+}
+.details-image{
+    width: 100vw !important;
+    height: 300px !important;
+    background: linear-gradient(rgba(103, 103, 103, 0.5), rgba(78, 78, 78, 0.5)), url(../img/maths.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.details-heading{
+  color: #d59884 !important;
+  margin-top: 0 !important;
+  border-bottom: 1px solid grey;
+  padding-bottom: 2% !important;
+}
+
+.details-p{
+  color: #4e4e4e;
+}
+
+.details-title{
+
+}
+
+.details-name{
+  margin-bottom: 5% !important;
+}
+.details-div{
+    position: absolute;
+    z-index: 5;
+    top: 8%;
+    left: 16%;
+    width: 70%;
+}
+.details-video{
+  height: 100px;
+  width: 100%;
+
+}
+.details-slots{
+    color: white;
+    text-align: center;
+
+  }
+.details-slots-sub{
+      font-size: 12px !important;
+    color: white;
+      text-align: center;
+}
+.details-video-title{
+  font-size: 15px !important;
+}
+.details-bar{
+  width: 150px;
+  background-color: #c31c1c;
+  height: 2px;
+  display: inline-block;
+  margin-left: 9%;
+  margin-bottom: 5%;
+}
+
+.details-skill{
+  background-color: #eab825;
+  border-radius: 30% !important;
+}
+.details-button{
+  border-radius: 45% !important;
+  margin-right: 2% !important;
+  margin-bottom: 2% !important; 
+}
+
+.button-video {
+    color: #fff !important;
+    border: 1px solid #eab825;
+    margin-left: 6% !important;
+    margin-top: 15% !important;
+    font-size: 15px;
+    text-align: center;
+    background-color: #eab825;
+    border-radius: 40px;
+    padding: 5% 5%!important;
+    font-weight: 500;
+}
+
+.grey{
+  color: grey !important;
+}
+
+/*Sidenav*/
+.platform-android .list:not(.card), .platform-override .list:not(.card){
+  padding-top: 0;
+}
+
+a.item {
+    margin: 5% 0% !important;
+    font-size: 18px !important;
+    color: #424242 !important;
+}
+
+.side-menu a {
+  padding: 20px !important;
+}
+.sidedp{
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.side-menu-header {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(../img/sidemenubg.jpg);
+    background-size: cover;
+    height: 150px;
+}
+.m-r-5{
+  margin-right: 5% !important;
+}
+
+.login{
+  background: url(http://bestpetpics.com/wp-content/uploads/2015/03/Cute-Pets.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+
+
+}
+
+
+/*login*/
+
+.login-title{
+  top: 10% !important;
+  margin-top: 23% !important;
+}
+
+.login-email{
+  color: #CCC;
+  left: 2% !important;
+}
+
+.login-input{
+  color: #FFF !important;
+  background: transparent;
+  border-bottom: 1px solid #FFF !important;
+  width: 90% !important;
+}
+
+.login-password{
+  color: #CCC;
+  left: 2% !important;
+  margin-top: 5% !important;
+}
+
+.login-password-div{
+  margin-top: 5% !important
+}
+
+.login-bg {
+  background:   linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../img/bg.jpg');
+  background-size: cover;
+}
+
+.login-forget{
+  color: #404040 !important;
+  text-align: right !important;
+  margin-top: 5% !important;
+  margin-right: 5% !important;
+  width: 90%;
+}
+
+.login-forget a {
+  color: #FFF;
+}
+
+.login-content{
+  margin-top: 25% !important;
+  padding-left: 10%;
+  margin-right: 5% !important;
+}
+
+.login-btn{
+  margin-top: 10% !important;
+  height: 50px !important;
+  width: 90% !important;
+  border: none !important;
+}
+/*end of login*/

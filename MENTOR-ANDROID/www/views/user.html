@@ -1,0 +1,83 @@
+<ion-view view-title="{{uid}}" cache-view="true" enable-menu-with-back-views="false">
+    <ion-nav-buttons side="left">
+      <button class="button icon ion-android-arrow-back black1" ng-controller="UtilController" on-tap="go('back')"></button>
+    </ion-nav-buttons>
+    
+
+   <ion-content class="" overflow-scroll="true" animation="slide-left-right" style="background-color: whitesmoke;"> 
+      <div class="details-image">
+        <!-- <img src="../img/details.jpeg" class="details-img"> -->
+      </div>
+      <div class="details-div">
+        <center>
+          <img src="../img/avatar.png" class="cat-image">
+          <h6 class="zero_margin details-title white1">{{uid}}</h6>
+        </center>
+          <div class="row">
+            <span class="button-video">
+            Video Call
+          </span>
+          <span class="button-video">
+            Message
+          </span>
+          </div>
+          
+        
+            
+      </div>
+      
+      <div class="row zero_padding" style="margin-top: 10px;">
+        <div class="col-50" ng-click="change()">
+          <h6 class="zero_margin center-align">Student Profile</h6>
+          <span ng-show="val==true" class="details-bar"></span>
+        </div>
+        <div class="col-50" ng-click="change()">
+          <h6 class="zero_margin center-align">Enrolled Courses</h6>
+          <span ng-show="val==false" class="details-bar"></span>
+        </div>
+      </div>
+      <!-- Courses -->
+      <div class="card card-padding" ng-show="val==true" style="margin-top: 0;">
+        <h5 class="details-heading"> Description</h5>
+        <p class="details-p">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis purus lectus. Cras varius maximus felis a venenatis. Curabitur imperdiet id dolor at vestibulum. Donec vehicula lectus vehicula felis auctor, eu consectetur mi vulputate.
+        </p>
+      </div>
+      <div class="card card-padding" ng-show="val==true">
+        <h5 class="details-heading"> Introduction Video</h5>
+        <div class="row">
+          <div class="col-33">
+            <img src="../img/video.png" class="details-video">
+          </div>
+          <div class="col">
+            <h6 class="zero_margin details-video-title"> Insights Into Algebric CodeBreaking</h6>
+            <sub>04.55</sub>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mentor -->
+      <div ng-show="val==false">
+        <div class="card" >
+            
+            <div class="row ">
+              <div class="col-20">
+                <img src="../img/sidemenubg.jpg" class="course-image">
+              </div>
+              <div class="col" >
+                
+                <h6 class="zero_margin course-title">Algebra</h6>
+                  <p class="course-duration zero_margin">Tuesday 4.30PM</p>
+                  <p class="course-duration zero_margin grey">Assignment Not Submitted</p>
+                
+              </div>
+              <div class="col-25">
+                <span class="course-details">View Details</span>
+              </div>
+              
+            </div>
+          </div>
+
+        </div>
+    </ion-content>
+</ion-view>

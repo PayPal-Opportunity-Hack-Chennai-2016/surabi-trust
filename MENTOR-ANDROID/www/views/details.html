@@ -1,0 +1,86 @@
+<ion-view view-title="{{course.name}}" cache-view="true" enable-menu-with-back-views="false">
+    <ion-nav-buttons side="left">
+      <button class="button icon ion-android-arrow-back black1" ng-controller="UtilController" on-tap="go('back')"></button>
+    </ion-nav-buttons>
+    
+
+	 <ion-content class="" overflow-scroll="true" animation="slide-left-right" style="background-color: whitesmoke;"> 
+      <div class="details-image">
+        <!-- <img src="../img/details.jpeg" class="details-img"> -->
+      </div>
+      <div class="details-div">
+        <center>
+          <img src="../img/maths.jpg" class="cat-image">
+          <h6 class="zero_margin details-title white1">{{course.name}}</h6>
+          <h6 class="zero_margin details-name white1">{{user.name}}</h6>     
+        </center>
+        <div class=" row zero_padding">
+            <h6 class="col zero_margin details-slots">{{course.slots.length || 0}}</h6>
+            <h6 class="col zero_margin details-slots">{{course.slots.booked.length || 0}}</h6>
+          </div>
+          <div class=" row">
+            <h6 class="col zero_margin details-slots-sub">Total Slots</h6>
+            <h6 class="col zero_margin details-slots-sub">Booked slots</h6>
+          </div>
+      </div>
+      
+      <div class="row zero_padding" style="margin-top: 10px;">
+        <div class="col-50" ng-click="change()">
+          <h6 class="zero_margin center-align">Course Details</h6>
+          <span ng-show="val==true" class="details-bar"></span>
+        </div>
+        <div class="col-50" ng-click="change()">
+          <h6 class="zero_margin center-align">Enrolled Student</h6>
+          <span ng-show="val==false" class="details-bar"></span>
+        </div>
+      </div>
+      <!-- Courses -->
+      <div class="card card-padding" ng-show="val==true" style="margin-top: 0;">
+        <h5 class="details-heading"> Course Description</h5>
+        <p class="details-p">
+          {{course.description}}
+        </p>
+      </div>
+      <div class="card card-padding" ng-show="val==true">
+        <h5 class="details-heading"> Introduction Video</h5>
+        <div class="row">
+          <div class="col-33">
+            <img src="../img/video.png" class="details-video">
+          </div>
+          <div class="col">
+            <h6 class="zero_margin details-video-title"> Insights Into Algebric CodeBreaking</h6>
+            <sub>04.55</sub>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mentor -->
+      <div ng-show="val==false">
+        <div class="card" ng-repeat="enrolled in course.enrolled">
+            <a ui-sref="user({ uid : 'Mariane Roberts' })">
+            <div class="row ">
+              <div class="col-20">
+                <img src="../img/sidemenubg.jpg" class="course-image">
+              </div>
+              <div class="col" >
+                
+                <h6 class="zero_margin course-title">{{enrolled.name}}</h6>
+                  <p class="course-duration zero_margin">{{enrolled.time}}</p>
+                  <p class="course-duration zero_margin grey">{{enrolled.assignment.status}}</p>
+                
+              </div>
+              <div class="col-25">
+                <span class="course-details">View Details</span>
+              </div>
+              
+            </div>
+            </a>
+        </div>
+
+        <div class="card card-padding">
+          <h6>No Students Enrolled Yet</h6>
+        </div>
+
+        </div>
+    </ion-content>
+</ion-view>

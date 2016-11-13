@@ -1,0 +1,16 @@
+<ion-view view-title="Call {{toCall.name}}" cache-view="false" enable-menu-with-back-views="false" hide-nav-bar="false">
+    <ion-nav-buttons side="left">
+      <button class="button icon ion-android-arrow-back" ng-controller="UtilController" ng-click="go('/home')"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+      <button class="button icon ion-ios-videocam" ng-click="startCall()"></button>
+    </ion-nav-buttons>
+
+    <ion-content class="padding has-header">
+
+      <div class="card" style="height:40vh">
+        <video style="height:40vh" id="contact-video" autoplay></video>
+      </div>
+
+    </ion-content>
+</ion-view>

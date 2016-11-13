@@ -1,0 +1,44 @@
+<ion-view view-title="Students" cache-view="true" enable-menu-with-back-views="false" hide-nav-bar="false">
+    <ion-nav-buttons side="left">
+      <button class="button icon ion-android-arrow-back black1" ng-controller="UtilController" on-tap="go('back')"></button>
+    </ion-nav-buttons>
+
+
+    <ion-content class="background">
+      
+        <div class="card">
+          <a ui-sref="user({ uid : 'Mariane Roberts' })">
+          <div class="row ">
+            <div class="col-20">
+              <img src="../img/sidemenubg.jpg" class="course-image">
+            </div>
+            <div class="col">
+              <h6 class="zero_margin course-title">Marian Roberts</h6>
+                <p class="course-duration zero_margin">Mathematics</p>
+            </div>
+            <div class="col-25">
+              <span class="course-details">View Details</span>
+            </div>
+          </div>
+        </a>
+        </div>
+
+        <div class="card">
+          <a ui-sref="user({ uid : 'John Doe' })">
+          <div class="row ">
+            <div class="col-20">
+              <img src="../img/sidemenubg.jpg" class="course-image">
+            </div>
+            <div class="col">
+              <h6 class="zero_margin course-title">John Doe</h6>
+                <p class="course-duration zero_margin">Physics</p>
+            </div>
+            <div class="col-25">
+              <span class="course-details">View Details</span>
+            </div>
+          </div>
+          </a>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>

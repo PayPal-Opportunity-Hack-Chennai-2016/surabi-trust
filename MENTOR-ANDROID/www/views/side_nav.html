@@ -1,0 +1,44 @@
+<ion-content>
+    <div class="list side-menu" ng-controller="UtilController">
+      <div class="side-menu-header">
+
+        
+          <div class="row">
+                  <div class="col col-33">
+                    <img src="../img/profilpic.jpg" class="sidedp">
+                  </div>
+                  <div class="col">
+                     <p class="light" style="margin-top:40px; margin-left: 10px; font-size: 16px;
+                     font-weight: 400; color: #fafafa; margin-bottom: 5px; ">
+                        {{namedisp}}
+                      </p>
+                      <p class="light" style="margin-left: 10px; opacity: 0.6"></p>
+                  </div>
+          </div>
+
+         
+       
+      </div>
+     
+     <div class="item item-divider" style="height: 40px;
+    line-height: 42px; background: #FFF !important; color: #afafaf !important; 
+    margin-top: 10px">
+       Account
+     </div>
+     
+    <a menu-close class="item" ng-click="go('/myprofile')">
+      <i class="ion ion-person m-r-5"></i>My Profile
+    </a>
+    <a menu-close class="item" ng-click="go('/category/1')">
+        <i class="ion-android-notifications m-r-5"></i>Notifications
+    </a>
+    <a menu-close class="item " ng-click="go('/category/1')">
+    <i class="ion-android-settings m-r-5"></i>Settings
+    </a>
+    <a menu-close class="item" ng-click="logout()">
+      <i class="ion-power m-r-5"></i>Logout
+    </a>
+
+
+
+  </ion-content>

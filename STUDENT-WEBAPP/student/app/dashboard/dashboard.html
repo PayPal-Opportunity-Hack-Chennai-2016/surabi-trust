@@ -1,0 +1,113 @@
+<header>
+  <navbar></navbar>
+</header>
+<main class="container">
+  <div class="content">
+    <br>
+    <div class="row">
+      <!-- Assignments -->
+      <div class="col s6">
+        <div class="card stats">
+          <div class="card-content">
+            <center>
+              <h1>{{vm.pending_assignments || 0}}</h1>
+              <h4 class="card-title">Pending Assignments</h4>
+            </center>
+          </div>
+        </div>
+      </div>
+      <!-- End of Assignments -->
+      <!-- Upcoming Meetup -->
+      <div class="col s6">
+        <div class="card stats">
+          <div class="card-content">
+            <center>
+              <h1>{{vm.upcoming_schedule || 'No Events'}}</h1>
+              <h4 class="card-title">Upcoming Schedule</h4>
+            </center>
+
+          </div>
+        </div>
+      </div>
+      <!-- End of Bar Graph -->
+    </div>
+    <div class="row">
+      <div class="col">
+        <b>
+          <h5>Choose a Category</h5>
+        </b>
+      </div>
+    </div>
+    <!-- Category -->
+    <div class="row">
+      <div class="col s3">
+        <div class="card category" style="background: #FFD740">
+          <a ui-sref="category({ id: 'history' })">
+            <img src="/student/assets/images/icons/history.png" alt="">
+          </a>
+          <h6>History</h6>
+        </div>
+      </div>
+      <div class="col s3">
+        <div class="card category" style="background: #FFC400">
+          <a ui-sref="category({ id: 'arts' })">
+            <img src="/student/assets/images/icons/arts.png" alt="">
+          </a>
+          <h6>Arts</h6>
+        </div>
+      </div>
+      <div class="col s3">
+        <div class="card category" style="background: #FFE57F">
+          <a ui-sref="category({ id: 'physics' })">
+            <img src="/student/assets/images/icons/physics.png" alt="">
+          </a>
+          <h6>Physics</h6>
+        </div>
+      </div>
+      <div class="col s3">
+        <div class="card category" style="background: #FFD740">
+          <a ui-sref="category({ id: 'mathematics' })">
+            <img src="/student/assets/images/icons/mathematics.png" alt="">
+          </a>
+          <h6>Mathematics</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s3">
+        <div class="card category" style="background: #FFE57F">
+          <a ui-sref="category({ id: 'chemistry' })">
+            <img src="/student/assets/images/icons/chemistry.png" alt="">
+          </a>
+          <h6>Chemistry</h6>
+        </div>
+      </div>
+      <div class="col s3">
+        <div class="card category" style="background: #FFD740">
+          <a ui-sref="category({ id: 'english' })">
+            <img src="/student/assets/images/icons/english.png" alt="">
+          </a>
+          <h6>English</h6>
+        </div>
+      </div>
+      <div class="col s3">
+        <div class="card category" style="background: #FFD740">
+          <a ui-sref="category({ id: 'biology' })">
+            <img src="/student/assets/images/icons/biology.png" alt="">
+          </a>
+          <h6>Biology</h6>
+        </div>
+      </div>
+      <div class="col s3">
+        <div class="card category" style="background: #FFC400">
+          <a ui-sref="category({ id: 'geography' })">
+            <img src="/student/assets/images/icons/geography.png" alt="">
+          </a>
+          <h6>Geography</h6>
+        </div>
+      </div>
+    </div>
+    <!-- End of Categoy -->
+  </div>
+</main>
