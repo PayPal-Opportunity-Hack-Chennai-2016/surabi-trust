@@ -1,0 +1,112 @@
+.login {
+  background-color: #FFC400;
+}
+
+.login .logo {
+  width: 200px;
+  margin: 20px auto;
+  margin-top: 10%;
+}
+
+.login .logo img {
+  width: 200px;
+}
+
+.login .login-title {
+  font-family: "Montserrat";
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #9a9a9a;
+  margin: 0;
+}
+
+.login .card-panel {
+  height: 30%;
+}
+
+.prefix {
+  color: #d8d6d6;
+  top: 12px;
+}
+
+
+.dashboard .card-content h3{
+  margin-bottom: 0px;
+  color: #263238;
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+.dashboard .card-content img{
+  margin-left: 42%;
+}
+
+.dashboard .card-content p{
+  color: #D25435;
+}
+
+.modal h4{
+  color: #D25435;
+}
+
+.dashboard .card-content i {
+  margin-right: 10px;
+}
+
+/* Tabs */
+.tabs .tab a {
+  color: #FFF;
+  background: #339ead;
+}
+
+.tabs .tab a:hover {
+  color: #FAFAFA;
+}
+
+.tabs .indicator {
+  background-color: #fff;
+  border-bottom: 1px solid #CCC;
+}
+
+/* Nav */
+nav a {
+  color: black !important;
+}
+
+nav ul {
+  margin-right: 20px;
+}
+
+nav .brand-logo {
+  margin-left: 20px;
+}
+
+nav .brand-logo img {
+  width: 100px;
+  margin-top: 25px;
+}
+
+/* Helpers */
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.p10 {
+  padding: 10px;
+}
+
+.rounded-btn {
+  border-radius: 40px;
+}
+
+.view-all-courses:hover{
+  cursor: pointer;
+}
+
+.view-in-usr:hover{
+  cursor: pointer;
+}

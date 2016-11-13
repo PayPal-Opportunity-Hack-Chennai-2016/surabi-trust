@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>BalVikas - Create admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+  </head>
+  <body class="dashboard grey lighten-3">
+    <!--Nav bar -->
+    <nav class="amber">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">
+          <img src="static/images/balVikasLogo.png" style="margin-top:15px" alt="" />
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/dashboard">Home</a></li>
+          <li class="active"><a href="/create">Create</a></li>
+          <li><a href="/mentor">Mentors</a></li>
+          <li><a href="/student">Student</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Page container -->
+        <div class="container" style="width:40%;padding-top:10px;">
+            <h5 class="col s12 center-align" style="color:#D25435">CREATE ADMIN</h5>
+          <div class="col s12 m6">
+            <div class="card horizontal">
+              <div class="card-stacked">
+                <div class="card-content">
+                  <form action="/create" method="post" autocomplete="off">
+                    <div class="row">
+                      <div class="input-field col s6 offset-s3">
+                        <i class="material-icons prefix ion-person"></i>
+                        <input type="text" placeholder="Enter name" required class="validate" name="name">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s6 offset-s3">
+                        <i class="material-icons prefix ion-email"></i>
+                        <input type="email" placeholder="Enter email" required class="validate" name="email">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s6 offset-s3">
+                        <i class="material-icons prefix ion-locked"></i>
+                        <input type="password" placeholder="Enter password" required class="validate" name="password">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col s4 right">
+                        <button type="submit" class="btn rounded-btn">Create Admin</button>
+                      </div>
+                    </div>
+                    <div class="row center-align">
+                      <div class="col s6 offset-s4">
+                        {% if err_msg %}
+                        <p><strong>Error:</strong> {{ err_msg }}
+                        {% endif %}
+                        {% if success_msg %}
+                        <p><strong> {{ success_msg }}</strong>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Page Container -->
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src="static/js/sweetalert.min.js"></script>
+  </body>
+</html>
