@@ -27,6 +27,7 @@ module.exports = function(app) {
   app.delete('/course/delete', session.isAuthenticated, course.remove);
 
   // Assignments Route
+  app.get('/assignment/all', session.isAuthenticated, assignment.getAll);
   app.post('/assignment/create', session.isAuthenticated, assignment.create);
   app.post('/assignment/submit', session.isAuthenticated, assignment.submit);
 
