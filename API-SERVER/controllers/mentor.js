@@ -40,11 +40,11 @@ exports.login = function(req, res, next)  {
     }
     else if(mentor) {
       // In case the user is not approved, don't  allow him to login
-      if(!mentor.isApproved) {
-        res.status(400);
-        res.send({ status: "failure", message: "You are not approved yet." });
-      }
-      else {
+      // if(!mentor.isApproved) {
+      //   res.status(400);
+      //   res.send({ status: "failure", message: "You are not approved yet." });
+      // }
+      // else {
         var isCorrect = bcrypt.compareSync(password, mentor.password);
         if(isCorrect) {
           req.user = mentor;
@@ -54,7 +54,7 @@ exports.login = function(req, res, next)  {
           res.status(400);
           res.send({ status: "failure", message: "Incorrect Password" });
         }
-      }
+      //}
 
     }
     else {

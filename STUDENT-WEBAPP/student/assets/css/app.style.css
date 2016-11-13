@@ -1,0 +1,98 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto";
+  font-weight: 300; }
+
+nav {
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.side-nav.fixed {
+  z-index: 10; }
+
+.has-topmenu {
+  padding-top: 64px; }
+
+.has-sidemenu {
+  padding-left: 240px; }
+
+navbar nav {
+  background: #FFBB00 !important; }
+
+nav ul a {
+  color: #000 !important; }
+
+.content {
+  padding-left: 25px;
+  padding-right: 25px; }
+
+body {
+  background: #efefef; }
+
+.login-bg {
+  margin: 0;
+  background: url("../images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.progress {
+  margin: 0; }
+
+/* Icons */
+.icon {
+  font-size: 18px !important;
+  width: 2.5rem !important;
+  margin-right: 10px !important;
+  text-align: center !important; }
+
+/* Cards */
+.card .card-title {
+  font-size: 16px;
+  margin: 0 auto;
+  margin-bottom: 20px; }
+
+/* Chart JS */
+.chart-container ul {
+  margin-top: 20px; }
+
+.category {
+  height: 200px;
+  cursor: pointer; }
+  .category img {
+    margin-left: 28%;
+    width: 90px;
+    opacity: .8;
+    margin-top: 20%; }
+  .category img:hover {
+    opacity: 1; }
+  .category h6 {
+    text-align: center; }
+
+.stats h1 {
+  font-size: 35px;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.stats h4 {
+  color: #D25435 !important;
+  font-weight: bold !important; }
+
+.results h5 {
+  padding: 10px;
+  padding-left: 20px; }
+
+.results .profile-card {
+  box-shadow: 0 0 3px #ccc;
+  background: #FFF;
+  padding: 15px; }
+  .results .profile-card .duration {
+    font-weight: normal;
+    font-style: normal;
+    color: #5c5c5c; }
+  .results .profile-card img {
+    border-radius: 50%;
+    border: 1px solid #CCC; }
+
+#showIcon {
+  position: absolute;
+  left: 40%;
+  top: -50px; }

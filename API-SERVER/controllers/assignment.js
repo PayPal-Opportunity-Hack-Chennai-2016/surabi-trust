@@ -2,6 +2,15 @@
 
 const Assignment = require('../models').Assignment;
 
+exports.getAll = function(req, res) {
+  var course_id = req.query.id || req.body.id;
+
+  Assignment.find({}, function(err, assignments) {
+    res.status(200);
+    res.send({ status: "success", assignments: assignments});
+  })
+}
+
 // Create a new Assignment
 exports.create  = function(req, res) {
 

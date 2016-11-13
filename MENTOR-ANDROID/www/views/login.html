@@ -1,0 +1,38 @@
+<ion-view hide-nav-bar="true" enable-menu-with-back-views="false">
+  <ion-content class="login-bg">
+    <div class="login-card">
+      <div class="login-title">
+        <center>
+          <img src="img/logo.png" alt="Rigor One" style="width: 200px">
+        </center>
+      </div>
+        <div class="login-content">
+
+          <div>
+            <span class="login-email">Email address</span>
+            <input type="email" class="login-input" placeholder="Enter your Email" ng-model="formData.email" >
+          </div>
+
+          <div class="login-password-div">
+            <span  class="login-password">Password</span>
+            <input type="password" class="login-input" placeholder="Enter your Password" ng-model="formData.password">
+          </div>
+
+          <div class="login-forget">
+            <a href="">Forgot Password?</a>
+          </div>
+
+          <button class="button-royal button-stable login-btn" ng-click="loginSubmit()">
+            Login
+          </button>
+        </div>
+
+    </div>
+  </ion-content>
+</ion-view>
+
+<style type="text/css">
+  .mdl-button__ripple-container {
+  display: none !important;
+}
+</style>

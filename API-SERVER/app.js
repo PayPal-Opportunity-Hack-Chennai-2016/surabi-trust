@@ -20,7 +20,7 @@ var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
-
+    res.header('Access-Control-Allow-Headers', 'x-auth-token');
     next();
 }
 
@@ -37,6 +37,6 @@ app.all("/*", function(req, res, next) {
     res.sendfile("index.html", { root: __dirname + "/public/student" });
 });
 
-app.listen(config.PORT, function(){
+app.listen(config.PORT, '0.0.0.0',function(){
 	console.log('Server listening on port '+ config.PORT);
 });

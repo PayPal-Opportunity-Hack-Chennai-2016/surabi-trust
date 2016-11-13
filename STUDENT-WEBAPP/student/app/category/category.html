@@ -1,0 +1,59 @@
+<header>
+  <navbar></navbar>
+</header>
+<main class="container">
+  <div class="content">
+    <br><br>
+    <div class="row" ng-show="vm.courses.length > 0">
+      <div class="col s12">
+        <h5>Courses available in <b>{{vm.type}}</b></h5>
+      </div>
+    </div>
+    <div class="card" ng-repeat="c in vm.courses">
+      <div class="row" style="margin-left: 10px; margin-top: 20px">
+        <div class="col s11">
+          <div class="profile-card row" style="margin-left: 0; margin-top: 20px">
+            <b>{{c.name}} <i class="pull-right duration">Duration : {{c.duration}} days</i></b>
+            <p>{{c.description}}</p>
+            <div class="col s12" style="padding-left: 0">
+               <div class="chip" ng-repeat="s in c.keywords">{{s}}</div>
+            </div>
+            <a href="" class="pull-right" ng-click="vm.enroll(c)">Enroll for Course -></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row" ng-show="vm.courses.length == 0">
+      <center style="opacity: 0.7">
+        <img src="/student/assets/images/icons/empty-course.png" alt=""><br><br>
+        <b>No Courses available for {{vm.type}}</b>
+      </center>
+
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h5>Course Details - {{vm.modal.name}}</h5>
+        <p>{{vm.modal.description}}</p>
+        <p>Duration: {{vm.modal.duration}} days</p>
+        <hr>
+        <b>Available Slots</b>
+        <div ng-repeat="c in vm.modal.slots">
+          <br><br>
+          <b>Slot #{{$index+1}}</b> - {{c.from}} to {{c.to}}
+          <br><br>
+          <button class="chip btn" ng-click="vm.slot_id = c._id" ng-repeat="i in c.days">{{i}}</button>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" ng-click="confirmEnroll()" class="waves-effect waves-green btn">Enroll</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+
+  </div>
+</main>

@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Surabi - Admin Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="static/css/style.css">
+  </head>
+  <body class="login">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div class="logo">
+            <img src="static/images/balVikasLogo.png" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- Login Form Container -->
+      <div class="row">
+        <div class="col s12">
+          <h4 class="center-align login-title white-text">Login to your balvikas Account</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s6 offset-s3">
+          <div class="card-panel grey lighten-4">
+              <form role="form" action="/login" method="post" autocomplete="off">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix ion-person"></i>
+                  <input type="email" placeholder="Enter Your EMail" class="validate" name="inputUsername" id='email'>
+                </div>
+                <div class="input-field col s12">
+                  <i class="prefix ion-lock-combination"></i>
+                  <input type="password" placeholder="Enter Your Password" class="validate" name="inputPassword" id='password'>
+                </div>
+                <div class="col s4 right">
+                  <button class="btn mt20 right rounded-btn" type='submit' name='btn_login'>Login</button>
+                </div>
+              </form>
+              {% if error %}
+              <p><strong>Error:</strong> {{ error }}
+              {% endif %}
+          </div>
+        </div>
+      </div>
+      <!-- End of Login Form -->
+    </div>
+    <!-- Scripts -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<html>
+  <head>
+    <title>Balvikas - Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+  </head>
+  <body class="dashboard grey lighten-3">
+    <!--Nav bar -->
+    <nav class="amber">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">
+          <img src="static/images/balVikasLogo.png" style="margin-top:15px" alt="" />
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="/create">Create</a></li>
+          <li><a href="/mentor">Mentors</a></li>
+          <li><a href="/student">Student</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- End of Nav bar -->
+    <!-- Page Container -->
+    <div class="container">
+      <div class="row mt10">
+        <div class="col s12">
+          <div class="row">
+          </div>
+          <div class="row">
+            <!-- Mentor Card -->
+            <div class="col s6">
+              <div class="card horizontal">
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <img src="/static/images/mentor.png" style="height:auto;width:85px;"/>
+                    <h3>{{mentor_length}}</h3>
+                    <p class="center-align">
+                      Mentors
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of Mentors Card -->
+            <!-- Students Card -->
+            <div class="col s6">
+              <div class="card horizontal">
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <img src="/static/images/user.png" style="height:auto;width:85px;"/>
+                    <h3>{{student_length}} </h3>
+                    <p class="center-align">
+                      Students
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of Students Card -->
+            <!-- Courses Card -->
+            <div class="col s6">
+              <div class="card horizontal">
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <img src="/static/images/student.png" style="height:auto;width:85px;"/>
+                    <h3>{{course_list | count}}</h3>
+                    <p class="center-align">
+                      Courses
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a data-target="modal1" class="teal-text view-all-courses">View All Courses</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of Courses card -->
+            <!-- InactiveUser card -->
+            <div class="col s6">
+              <div class="card horizontal">
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <img src="/static/images/inactiveUser.png" style="height:auto;width:85px;"/>
+                    <h3>{{inactive_users | count}}</h3>
+                    <p class="center-align">
+                      Inactive users
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a data-target="modal2" class="teal-text view-in-usr">View Inactive Users</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of Inactive User card -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <a class=" modal-action modal-close btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">X</i></a>
+        <h4 class="center-align ">LIST OF COURSES</h4>
+        <table class="striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Duration</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for attr in course_list %}
+            <tr>
+              <td>{{attr.name}}</td>
+              <td>{{attr.description}}</td>
+              <td>{{attr.duration}}</td>
+              <td>{{attr.type}}</td>
+            </tr>
+           {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Modal structure 2 -->
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <a class=" modal-action modal-close btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">X</i></a>
+        <h4 class="center-align">LIST OF INACTIVE USERS</h4>
+        <table class="striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Phone</th>
+              <th>EMail</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for attr in inactive_users %}
+            <tr>
+              <td>{{attr.name}}</td>
+              <td>{{attr.age}}</td>
+              <td>{{attr.gender}}</td>
+              <td>{{attr.phone | round | int}}</td>
+              <td>{{attr.email}}</td>
+            </tr>
+           {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- End of Page Container -->
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $(".view-in-usr").click(function(){
+          $('#modal2').openModal();
+        });
+    $(".view-all-courses").click(function(){
+        $('#modal1').openModal();
+      });
+    });
+    </script>
+  </body>
+</html>
