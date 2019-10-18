@@ -37,7 +37,7 @@ pytest==2.7.2
 python-cloudfiles==1.7.10
 pyttsx==1.1
 pytz==2016.6.1
-pyxdg==0.25
+pyxdg==0.26
 requests==2.10.0
 simplejson==3.8.2
 six==1.10.0
