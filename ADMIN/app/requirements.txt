@@ -19,7 +19,7 @@ httplib2==0.9.1
 idna==2.0
 ipaddress==1.0.16
 itsdangerous==0.24
-Jinja2==2.8
+Jinja2==2.11.3
 lockfile==0.12.2
 MarkupSafe==0.23
 Ming==0.5.4
